@@ -15,5 +15,18 @@
     {% else %}
         <p>No polls are available.</p>
     {% endif %}
+
+    {{ 1|add:1 }}
+    {{ "DJango"|center:"15" }}
+    <br>{% now "jS \o\f F" %}
+
+    {% with mydemo="{'name':123}"  %}
+        <br>{{ mydemo|cut:':' }}
+    {% endwith %}
+
+    <br>{{ 1234789|filesizeformat }}
+    {% with my="123" %}
+        <br>{{ my }}
+    {% endwith %}
 </body>
 </html>
