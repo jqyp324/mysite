@@ -16,4 +16,10 @@ def change_name(value, index):
 def current_time():
     return str(datetime.datetime.now())
 
+
+@register.inclusion_tag('polls/show_result.html')
+def show_custom():
+    resul = list(range(5))
+    return {'my_re': resul}
+
 # print(type(str(datetime.datetime.now())))
