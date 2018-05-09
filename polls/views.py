@@ -62,3 +62,7 @@ def vote(request, question_id):
         return HttpResponseRedirect(reverse("polls:results", args=(question_id,)))
 
         # return HttpResponse("you look at vote page : %s" % question_id)
+
+
+def page_not_found(request):
+    return HttpResponse("not fond part 404")
