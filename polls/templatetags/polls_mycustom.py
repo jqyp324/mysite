@@ -1,4 +1,5 @@
 from django import template
+import datetime
 
 register = template.Library()
 
@@ -9,3 +10,10 @@ def change_name(value, index):
         return value.replace(value[index], 'yupeng')
     else:
         return value
+
+
+@register.simple_tag(name='nowtime')
+def current_time():
+    return str(datetime.datetime.now())
+
+# print(type(str(datetime.datetime.now())))
