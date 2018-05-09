@@ -2,6 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Index</title>
+    {% load humanize %}
+    {% load polls_mycustom %}
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 </head>
@@ -36,6 +38,9 @@
     {% with my="123" %}
         <br>{{ my }}
     {% endwith %}
+
+    {{ 1|apnumber }}
+    <br>{{ "ijk"|change_name:1 }}
 
 </body>
 </html>
